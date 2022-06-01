@@ -6,7 +6,7 @@ app = fastapi.FastAPI()
 
 @app.get('/')
 def index():
-    now = datetime.now()
+    now = datetime.now().strftime("%Y-%m-%d %H:%M")
     return {"now": now}
 
 if __name__ == "__main__":
